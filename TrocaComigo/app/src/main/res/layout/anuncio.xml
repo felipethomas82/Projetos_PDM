@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cardAnuncio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardCornerRadius="4dp"
+        android:layout_margin="5dp"
+        android:elevation="4dp"
+       >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:id="@+id/imgCapaAnuncio"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:fitsSystemWindows="true" />
+
+        <RelativeLayout
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/circulo_distancia"
+            android:layout_alignTop="@+id/relativeLayout"
+            android:layout_alignRight="@+id/tvDataAnuncio"
+            android:layout_alignEnd="@+id/tvDataAnuncio"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/marcador_verde"
+                android:id="@+id/imageView5"
+                android:layout_marginTop="5dp"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="10 km"
+                android:id="@+id/tvDistancia"
+                android:textColor="#FFFFFF"
+                android:gravity="center_horizontal"
+                android:layout_below="@+id/imageView5"
+                android:layout_centerHorizontal="true" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tvTituloAlerta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_below="@id/imgCapaAnuncio"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:text="Titulo anuncio"
+            android:layout_marginTop="-50dp"
+            android:layout_marginBottom="10dp"
+            android:background="#44000000"
+            android:textColor="#FFFFFF"/>
+
+
+
+
+        <br.ifsul.pdm.felipe.trocacomigo.CircularNetworkImageView
+            android:id="@+id/imgFotoUsuarioAnuncio"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/imgCapaAnuncio"
+            android:fitsSystemWindows="true"
+            />
+
+        <TextView
+            android:id="@+id/tvNomeUsuarioAnuncio"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            style="@style/Base.TextAppearance.AppCompat.Subhead"
+            android:text="Nome usuario"
+            android:layout_alignBottom="@+id/imgFotoUsuarioAnuncio"
+            android:layout_toRightOf="@+id/imgFotoUsuarioAnuncio"
+            android:layout_toEndOf="@+id/imgFotoUsuarioAnuncio"
+           />
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/tvTituloAlerta"
+            android:layout_alignStart="@+id/tvTituloAlerta"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="#212121"
+            android:id="@+id/relativeLayout">
+
+            <TextView
+                android:id="@+id/txtValorProdutoAnuncio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:text="Valor produto"
+
+
+                android:textColor="#FFFFFF"
+                android:layout_alignParentLeft="false"
+                android:layout_alignParentStart="false"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/relativeLayout"
+            android:layout_toEndOf="@+id/imgFotoUsuarioAnuncio"
+            android:background="#AEEA00"
+            android:id="@+id/relativeLayout2"
+            android:layout_alignLeft="@+id/relativeLayout">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="tipo"
+                android:id="@+id/tvTipoAnuncio"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Small Text"
+            android:id="@+id/tvDataAnuncio"
+            android:layout_alignBottom="@+id/tvNomeUsuarioAnuncio"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"/>
+
+
+
+    </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

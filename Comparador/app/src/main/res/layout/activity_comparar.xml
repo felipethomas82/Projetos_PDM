@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".Comparar">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/txtQtd1"
+        android:width="100dp"
+        android:hint="Qtd"
+        android:layout_above="@+id/txtPreco1"
+        android:layout_toLeftOf="@+id/btnComparar"
+        android:layout_toStartOf="@+id/btnComparar"
+        android:layout_marginBottom="82dp"
+        android:digits="1234567890,." />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/txtQtd2"
+        android:width="100dp"
+        android:hint="Qtd"
+        android:layout_alignTop="@+id/txtQtd1"
+        android:layout_toRightOf="@+id/btnComparar"
+        android:layout_toEndOf="@+id/btnComparar"
+        android:digits="1234567890,." />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/txtPreco1"
+        android:width="100dp"
+        android:hint="Preço"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/txtQtd1"
+        android:layout_alignStart="@+id/txtQtd1"
+        android:digits="1234567890,." />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/txtPreco2"
+        android:layout_alignBottom="@+id/txtPreco1"
+        android:layout_alignLeft="@+id/txtQtd2"
+        android:layout_alignStart="@+id/txtQtd2"
+        android:width="100dp"
+        android:hint="Preço"
+        android:digits="1234567890,." />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comparar"
+        android:id="@+id/btnComparar"
+        android:layout_below="@+id/txtPreco1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="59dp"
+        android:onClick="comparaPrecos" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Resultado"
+        android:id="@+id/txtResultado"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="51dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Produto 1"
+        android:id="@+id/textView"
+        android:layout_marginBottom="41dp"
+        android:layout_above="@+id/txtQtd1"
+        android:layout_alignLeft="@+id/txtQtd1"
+        android:layout_alignStart="@+id/txtQtd1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Produto 2"
+        android:id="@+id/textView2"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignLeft="@+id/txtQtd2"
+        android:layout_alignStart="@+id/txtQtd2" />
+
+</RelativeLayout>

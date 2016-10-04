@@ -1,0 +1,61 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="theme1" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ListViewStyle" parent="android:style/Widget.ListView">
+        <item name="background">@color/colorPrimaryDark</item>
+        <item name="android:divider">@color/colorAccent</item>
+        <item name="android:dividerHeight">1dp</item>
+        <item name="android:listSelector">@color/colorPrimaryDark</item>
+        <item name="android:drawSelectorOnTop">false</item>
+        <item name="android:cacheColorHint">#00000000</item>
+    </style>
+
+    <style name="UserViewButto">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">45dp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">0.5</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="smallLighText">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">20dp</item>
+    </style>
+
+    <style name="pageTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">40dp</item>
+        <item name="android:textColor">@color/page_title</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+
+    <style name="pageTitleContainer">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:background">#fff</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+</resources>

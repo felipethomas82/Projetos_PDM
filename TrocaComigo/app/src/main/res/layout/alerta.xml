@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/cardAnuncio"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        card_view:cardCornerRadius="4dp"
+        android:elevation="4dp"
+       >
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvTituloAlerta"
+            android:layout_width="220dp"
+            android:layout_height="30dp"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:text="Titulo anuncio"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="#000000"
+            android:layout_weight="10"/>
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:layout_weight="2"
+                android:layout_width="10dp"
+                android:layout_height="20dp"
+                android:src="@drawable/notificacao"/>
+
+        </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvTextoNotificacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingBottom="10dp"
+                android:layout_marginLeft="15dp"
+                style="@style/Base.TextAppearance.AppCompat.Subhead"
+                android:text="Texto da notifcação" />
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

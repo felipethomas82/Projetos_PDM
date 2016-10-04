@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.ifsul.pdm.felipe.trocacomigo">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Permissoes do PARSE -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!--
+      IMPORTANT: Change "com.parse.starter.permission.C2D_MESSAGE" in the lines below
+      to match your app's package name + ".permission.C2D_MESSAGE".
+    -->
+    <permission
+        android:name="br.ifsul.pdm.felipe.trocacomigo.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="br.ifsul.pdm.felipe.trocacomigo.permission.C2D_MESSAGE" />
+
+    <!-- NO ANDROID NAME ERA VOLLEYSINGLETON -->
+    <application
+        android:name=".TrocaComigoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name=".FetchAddressIntentService"
+            android:exported="false" />
+        <service
+            android:name=".FetchCoordinatesIntentService"
+            android:exported="false" />
+        <service android:name="com.parse.PushService" />
+
+        <receiver
+            android:name="com.parse.ParsePushBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!--                   IMPORTANT: Change "com.parse.starter" to match your app's package name. -->
+                <category android:name="br.ifsul.pdm.felipe.trocacomigo" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateVisible" />
+        <activity
+            android:name=".atvCadastrarProduto"
+            android:label="@string/title_activity_atv_cadastrar_produto"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".atvCadastrarProdutoFotos"
+            android:label="@string/title_activity_atv_cadastrar_produto_fotos"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2"/>
+        <activity
+            android:name=".SplahScreen"
+            android:label="@string/title_activity_splah_screen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".atvLogin"
+            android:label="@string/title_activity_atv_login"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".atvRegister"
+            android:label="@string/title_activity_atv_register"
+            android:parentActivityName=".atvLogin"
+            android:screenOrientation="portrait"
+            android:theme="@style/TransparentTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".atvLogin" />
+        </activity>
+        <activity
+            android:name=".atvListaProdutos"
+            android:label="@string/title_activity_atv_lista_produtos"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2">
+            <meta-data
+                android:name="android.app.default_searchable"
+                android:value=".atvListaProdutos" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name=".atvMostrarFotoFull"
+            android:label="Foto"
+            android:parentActivityName=".atvCadastrarProdutoFotos"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat" />
+        <activity
+            android:name=".atvDetalhesProduto"
+            android:configChanges="keyboardHidden|orientation"
+            android:label="@string/title_activity_atv_detalhes_produto"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.DesignDemo"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".bkpReciclerView"
+            android:label="@string/title_activity_bkp_recicler_view" />
+        <activity
+            android:name=".testeListView"
+            android:label="@string/title_activity_teste_list_view" />
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="Mapa de Anúncios"
+            android:parentActivityName=".atvListaProdutos"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.ifsul.pdm.felipe.trocacomigo.atvListaProdutos" />
+        </activity>
+        <activity
+            android:name=".TesteGeocoder"
+            android:label="@string/title_activity_teste_geocoder" />
+        <activity
+            android:name=".atvCadastrarProdutoEndereco"
+            android:label="@string/title_activity_atv_cadastrar_produto_endereco"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".atvAnunciosUsuario"
+            android:label="@string/title_activity_atv_anuncios_usuario"
+            android:parentActivityName=".atvListaProdutos"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.ifsul.pdm.felipe.trocacomigo.atvListaProdutos" />
+        </activity>
+        <activity
+            android:name=".SearchResultActivity"
+            android:label="@string/title_activity_search_result"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".atvPerfilUsuario"
+            android:label="Perfil do Usuário"
+            android:parentActivityName=".atvListaProdutos"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.ifsul.pdm.felipe.trocacomigo.atvListaProdutos" />
+        </activity>
+        <activity
+            android:name=".AtvNotificacoes"
+            android:label="@string/title_activity_atv_notificacoes"
+            android:parentActivityName=".atvListaProdutos"
+            android:theme="@style/AppTheme2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.ifsul.pdm.felipe.trocacomigo.atvListaProdutos" />
+        </activity>
+    </application>
+
+</manifest>

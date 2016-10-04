@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:background="@drawable/user_bg"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:layout_height="wrap_content"
+        android:text="Lojas"
+        style="@style/UserViewButto"
+        android:id="@+id/btCompanies"
+        android:background="@android:color/transparent"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="sans-serif-light"/>
+
+    <Button
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="Carteira"
+        style="@style/UserViewButto"
+        android:id="@+id/btWallet"
+        android:layout_gravity="center_vertical" />
+
+</LinearLayout>

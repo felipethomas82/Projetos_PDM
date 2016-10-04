@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar">
+    </include>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clique no tipo de anúncio que deseja criar e insira os detalhes abaixo"
+            android:id="@+id/textView"
+            android:gravity="center_horizontal"
+            android:fontFamily="sans-serif-thin"
+            style="@style/Base.TextAppearance.AppCompat.Title" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_anuncio"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/textView"
+            android:layout_marginTop="10dp">
+            <RadioButton android:id="@+id/radio_troca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Troca"
+                android:onClick="onRadioButtonClicked"
+                android:layout_weight="1"/>
+            <RadioButton android:id="@+id/radio_aluguel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aluguel"
+                android:onClick="onRadioButtonClicked"
+                android:layout_weight="1"/>
+            <RadioButton android:id="@+id/radio_doacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Doação"
+                android:onClick="onRadioButtonClicked"
+                android:layout_weight="1"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="New Text"
+            android:id="@+id/txtTeste"
+            android:gravity="center_horizontal"
+            android:fontFamily="sans-serif-thin"
+            style="@style/Base.TextAppearance.AppCompat.Body1"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#55FFFFFF">
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTitulo"
+            android:layout_marginTop="37dp"
+            android:hint="Título do anúncio"
+            android:lines="1"
+            />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#55FFFFFF">
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDescricao"
+            android:hint="Descrição do anúncio"
+            android:lines="3" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#55FFFFFF">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:ems="10"
+            android:id="@+id/txtPreco"
+            android:hint="Preço"
+            android:lines="1"
+            android:numeric="decimal"
+            android:longClickable="false"
+            android:linksClickable="false"
+            android:digits="1234567890,." />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/til4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#55FFFFFF">
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtAceitaTrocar"
+            android:hint="Aceita trocar por..."
+            android:lines="1" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continuar"
+            android:id="@+id/btnSalvar"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:onClick="clickBtnSalvar"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.ifsul.pdm.felipe.imageview" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".MainActivityVideo"
+            android:label="@string/title_activity_main_activity_video" >
+        </activity>
+        <activity
+            android:name=".MainActivityWebView"
+            android:label="@string/title_activity_main_activity_web_view" >
+        </activity>
+        <activity
+            android:name=".MainActivityBotoes"
+            android:label="@string/title_activity_main_activity_botoes" >
+
+        </activity>
+        <activity
+            android:name=".MainActivitySegunda"
+            android:label="@string/title_activity_main_activity_segunda" >
+        </activity>
+        <activity
+            android:name=".atvListView"
+            android:label="@string/title_activity_atv_list_view" >
+
+
+        </activity>
+        <activity
+            android:name=".atvListasComplexas"
+            android:label="@string/title_activity_atv_listas_complexas" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>

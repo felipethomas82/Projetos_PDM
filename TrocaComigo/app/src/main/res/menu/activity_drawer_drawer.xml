@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_busca" android:icon="@android:drawable/ic_menu_search"
+            android:title="Busca produtos" />
+        <item android:id="@+id/nav_mapa_de_anuncios" android:icon="@android:drawable/ic_menu_mapmode"
+            android:title="Mapa de anúncios" />
+        <item android:id="@+id/nav_anuncios_usuario" android:icon="@android:drawable/ic_menu_add"
+            android:title="Meus anúncios" />
+        <item android:id="@+id/nav_perfil_usuario" android:icon="@drawable/ic_user"
+            android:title="Perfil de usuário" />
+        <item android:id="@+id/nav_notificacoes" android:icon="@drawable/notificacao"
+            android:title="Notificações" />
+    </group>
+
+
+</menu>

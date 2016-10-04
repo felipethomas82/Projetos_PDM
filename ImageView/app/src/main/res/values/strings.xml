@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ImageView</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main_activity_video">MainActivityVideo</string>
+    <string name="title_activity_main_activity_web_view">MainActivityWebView</string>
+    <string name="title_activity_main_activity_botoes">MainActivityBotoes</string>
+    <string name="title_activity_main_activity_segunda">MainActivitySegunda</string>
+    <string name="title_activity_atv_list_view">atvListView</string>
+    <string name="title_activity_atv_listas_complexas">atvListasComplexas</string>
+</resources>
