@@ -1,50 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <android.support.v7.widget.CardView
         xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         card_view:cardCornerRadius="4dp"
         android:layout_margin="5dp"
         android:elevation="4dp"
         android:id="@+id/cardView"
         >
 
-        <LinearLayout
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="match_parent"
+                android:layout_width="374dp"
                 android:layout_height="100dp"
                 android:backgroundTint="#888888"
-                android:id="@+id/ivPost"/>
+                android:id="@+id/ivPost"
+                card_view:srcCompat="@android:drawable/alert_dark_frame"
+                android:scaleType="centerCrop"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="0dp" />
+
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="374dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvUsuario"/>
+                android:id="@+id/tvTitulo"
+
+                android:text="Titulo"
+                card_view:layout_constraintLeft_toLeftOf="@+id/ivPost"
+                card_view:layout_constraintTop_toTopOf="@+id/ivPost"
+                android:layout_marginTop="64dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:layout_marginStart="24dp"
+                android:textColor="#FFFFFF" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="374dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvTitulo"/>
+                android:id="@+id/tvSubtitulo"
+                card_view:layout_constraintTop_toBottomOf="@+id/ivPost"
+                android:layout_marginTop="8dp"
+                card_view:layout_constraintLeft_toLeftOf="parent"
+                android:text="Subtitulo"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="36dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvSubtitulo"/>
+                android:id="@+id/tvTextoPost"
+                tools:layout_editor_absoluteX="0dp"
+                android:text="Texto"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                tools:layout_editor_absoluteY="135dp" />
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvTextoPost"/>
+                android:id="@+id/tvUsuario"
+                android:layout_marginTop="8dp"
+                card_view:layout_constraintTop_toBottomOf="@+id/tvTextoPost"
+                android:text="Usuario"
+                android:layout_marginEnd="16dp"
+                card_view:layout_constraintRight_toRightOf="parent" />
 
-        </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
 
 
     </android.support.v7.widget.CardView>

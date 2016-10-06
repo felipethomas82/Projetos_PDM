@@ -29,6 +29,7 @@
         <activity
             android:name=".MainActivitySegunda"
             android:label="@string/title_activity_main_activity_segunda" >
+
         </activity>
         <activity
             android:name=".atvListView"

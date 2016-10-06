@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Aula_Volley_HttpRequest.iml" filepath="$PROJECT_DIR$/Aula_Volley_HttpRequest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Aula_Volley_RecyclerView.iml" filepath="$PROJECT_DIR$/Aula_Volley_RecyclerView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
